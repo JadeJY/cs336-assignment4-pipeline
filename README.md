@@ -10,13 +10,8 @@ raise a GitHub issue or open a pull request with a fix.
 
 This directory is organized as follows:
 
-- [`./cs336-basics`](./cs336-basics): directory containing a module
-  `cs336_basics` and its associated `pyproject.toml`. This module contains the staff 
-  implementation of the language model from assignment 1. You will use this training code
-  to train an LM on your filtered data. You should not modify the training logic, since
-  your leaderboard submission must use it exactly.
-- [`./cs336_data`](./cs336_data): This folder is basically empty! This is the
-  module where you will implement code to filter and process the data.
+- [`./cs336-basics`](./cs336-basics): Ass1 model 的标准实现
+- [`./cs336_data`](./cs336_data): 包含所有的数据处理文件
 
 Visually, it should look something like:
 
@@ -25,11 +20,16 @@ Visually, it should look something like:
 ├── cs336_basics  # A python module named cs336_basics
 │   └── ... an optimized training implementation ...
 ├── cs336_data  # TODO(you): code that you'll write for assignment 4
-│   ├── __init__.py
-│   └── ... TODO(you): any other files or folders you need for assignment 4 ...
+│   └── __init__.py
+│   └── deduplication.py
+│   └── pipeline.py
+│   └── preprocessing.py
+│   └── preprocessing.py
 ├── README.md
 ├── pyproject.toml
-└── ... TODO(you): other files or folders you need for assignment 4 ...
+└── scripts
+    └── scrape_positive.sh
+    
 ```
 
 As in previous assignments, we use `uv` to manage dependencies.
